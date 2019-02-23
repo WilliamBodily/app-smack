@@ -215,7 +215,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-UH-IDS">
                                 <rect key="frame" x="62.5" y="160" width="250" height="94"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-BV-ggj">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-BV-ggj">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="IAG-UX-NPw"/>
@@ -232,7 +232,7 @@
                                             <constraint firstAttribute="width" constant="250" id="v51-7f-uUB"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5c-QS-jQD">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5c-QS-jQD">
                                         <rect key="frame" x="0.0" y="54" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="oal-Fd-GWl"/>
@@ -265,7 +265,7 @@
                                     <action selector="createAccountButtonPressed:" destination="gB6-Y7-RdG" eventType="touchUpInside" id="fM6-0X-Qwc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlM-iF-onG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlM-iF-onG" customClass="RoundedCornersButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="294" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -276,6 +276,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -315,9 +320,8 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fd-0k-qWh">
-                                <rect key="frame" x="331" y="33" width="28" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fd-0k-qWh">
+                                <rect key="frame" x="327" y="28" width="28" height="28"/>
                                 <state key="normal" image="closeButton"/>
                                 <connections>
                                     <action selector="closePressed:" destination="3I0-Ys-jgG" eventType="touchUpInside" id="vIB-u4-kj8"/>
@@ -327,7 +331,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="dvH-yi-7vf">
                                 <rect key="frame" x="62.5" y="126" width="250" height="148"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dle-Wc-hB3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dle-Wc-hB3">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="ZDJ-Oj-QkE"/>
@@ -344,7 +348,7 @@
                                             <constraint firstAttribute="width" constant="250" id="cjq-7H-jnP"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Psr-wF-Svz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Psr-wF-Svz">
                                         <rect key="frame" x="0.0" y="54" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="har-Qs-m2s"/>
@@ -361,7 +365,7 @@
                                             <constraint firstAttribute="width" constant="250" id="cbY-rY-4JE"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-qs-CD8">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-qs-CD8">
                                         <rect key="frame" x="0.0" y="108" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="Skb-pG-aQg"/>
@@ -380,7 +384,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mee-sB-Z4I">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mee-sB-Z4I" customClass="RoundedCornersButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -391,6 +395,14 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="3I0-Ys-jgG" eventType="touchUpInside" id="Zyq-I9-aR4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhO-af-hFl">
                                 <rect key="frame" x="137.5" y="314" width="100" height="130"/>
@@ -402,6 +414,7 @@
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="chooseAvatarPressed:" destination="3I0-Ys-jgG" eventType="touchUpInside" id="jjJ-h4-ddM"/>
                                     <action selector="createAccountButtonPressed:" destination="gB6-Y7-RdG" eventType="touchUpInside" id="nM4-3o-H8G"/>
                                 </connections>
                             </button>
@@ -420,6 +433,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountButtonPressed:" destination="gB6-Y7-RdG" eventType="touchUpInside" id="sH0-el-zK1"/>
+                                    <action selector="generateBackgroundColorPressed:" destination="3I0-Ys-jgG" eventType="touchUpInside" id="Nbw-9R-Qv9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -428,8 +442,10 @@
                             <constraint firstItem="uhO-af-hFl" firstAttribute="width" secondItem="82n-yo-oJi" secondAttribute="width" id="0c2-LM-b0Z"/>
                             <constraint firstItem="tTN-8R-f5c" firstAttribute="top" secondItem="uhO-af-hFl" secondAttribute="bottom" constant="4" id="4sj-BG-okK"/>
                             <constraint firstItem="dvH-yi-7vf" firstAttribute="top" secondItem="gRd-ls-7S4" secondAttribute="bottom" constant="40" id="5Ny-wd-1FE"/>
+                            <constraint firstItem="GpZ-Dh-B0D" firstAttribute="trailing" secondItem="6fd-0k-qWh" secondAttribute="trailing" constant="20" id="AaD-cm-Ubx"/>
                             <constraint firstItem="82n-yo-oJi" firstAttribute="top" secondItem="dvH-yi-7vf" secondAttribute="bottom" constant="40" id="BQ2-xb-ngP"/>
                             <constraint firstItem="Mee-sB-Z4I" firstAttribute="centerX" secondItem="dsv-IB-e4y" secondAttribute="centerX" id="Cvc-hn-AX8"/>
+                            <constraint firstItem="6fd-0k-qWh" firstAttribute="top" secondItem="GpZ-Dh-B0D" secondAttribute="top" constant="8" id="IkJ-my-PMf"/>
                             <constraint firstItem="GpZ-Dh-B0D" firstAttribute="bottom" secondItem="Mee-sB-Z4I" secondAttribute="bottom" constant="20" id="KMt-eC-N4u"/>
                             <constraint firstItem="uhO-af-hFl" firstAttribute="centerX" secondItem="dsv-IB-e4y" secondAttribute="centerX" id="aes-FA-UW3"/>
                             <constraint firstItem="82n-yo-oJi" firstAttribute="centerX" secondItem="dsv-IB-e4y" secondAttribute="centerX" id="bXe-6z-8uX"/>
@@ -442,6 +458,10 @@
                         <viewLayoutGuide key="safeArea" id="GpZ-Dh-B0D"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="Psr-wF-Svz" id="Vp0-Uy-O5s"/>
+                        <outlet property="passwordTextField" destination="ieZ-qs-CD8" id="uQp-kb-KFS"/>
+                        <outlet property="userImageView" destination="82n-yo-oJi" id="Vy9-SP-UUn"/>
+                        <outlet property="usernameTextField" destination="Dle-Wc-hB3" id="zaQ-Jk-PUj"/>
                         <segue destination="pZj-iu-rIL" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="GBg-uY-fJz"/>
                     </connections>
                 </viewController>

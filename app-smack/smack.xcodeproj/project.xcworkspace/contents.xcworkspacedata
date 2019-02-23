@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/william.bodily/Dropbox/Work/Devslopes/iOS 12 &amp; Swift/Slack App - Creating a Slack App &amp; Working With APIs/Smack/smack.xcodeproj">
+      location = "group:../Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
