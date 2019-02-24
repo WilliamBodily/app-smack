@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E5B3B8FAD346097B2EF8533 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE38E521DEEB80CFE847EBFD /* Pods_Smack.framework */; };
+		8D47FD0D22220D790065E8C3 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D47FD0C22220D790065E8C3 /* UserDataService.swift */; };
 		8D740EDF21A5FDFC006295BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D740EDE21A5FDFC006295BC /* AppDelegate.swift */; };
 		8D740EE421A5FDFC006295BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D740EE221A5FDFC006295BC /* Main.storyboard */; };
 		8D740EE621A5FDFD006295BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D740EE521A5FDFD006295BC /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D47FD0C22220D790065E8C3 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		8D740EDB21A5FDFC006295BC /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D740EDE21A5FDFC006295BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D740EE321A5FDFC006295BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				8D740F0821AB9BAD006295BC /* AuthService.swift */,
+				8D47FD0C22220D790065E8C3 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				8D740F0421A8CEEF006295BC /* LoginViewController.swift in Sources */,
 				8D740EDF21A5FDFC006295BC /* AppDelegate.swift in Sources */,
 				8DFA8993220D2C52004A363F /* RoundedCornersButton.swift in Sources */,
+				8D47FD0D22220D790065E8C3 /* UserDataService.swift in Sources */,
 				8D740EFB21A61996006295BC /* ChannelViewController.swift in Sources */,
 				8D740F0921AB9BAD006295BC /* AuthService.swift in Sources */,
 				8D740EFF21A7A2CB006295BC /* GradientView.swift in Sources */,
