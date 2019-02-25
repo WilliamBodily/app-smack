@@ -21,6 +21,8 @@
 		8D740F0421A8CEEF006295BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D740F0321A8CEEF006295BC /* LoginViewController.swift */; };
 		8D740F0621A8E010006295BC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D740F0521A8E010006295BC /* CreateAccountViewController.swift */; };
 		8D740F0921AB9BAD006295BC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D740F0821AB9BAD006295BC /* AuthService.swift */; };
+		8D8D7F672224851C00E0D1E4 /* AvatarChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D7F662224851C00E0D1E4 /* AvatarChooserViewController.swift */; };
+		8D8D7F6E22248CE200E0D1E4 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */; };
 		8DFA8993220D2C52004A363F /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA8992220D2C52004A363F /* RoundedCornersButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		8D740F0321A8CEEF006295BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8D740F0521A8E010006295BC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		8D740F0821AB9BAD006295BC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8D8D7F662224851C00E0D1E4 /* AvatarChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarChooserViewController.swift; sourceTree = "<group>"; };
+		8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		8DFA8992220D2C52004A363F /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		8DFA899422159CDE004A363F /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = smack.xcodeproj/../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		AD1C57C51DCD0D339448B56D /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				8D740EFC21A619A9006295BC /* ChatViewController.swift */,
 				8D740F0321A8CEEF006295BC /* LoginViewController.swift */,
 				8D740F0521A8E010006295BC /* CreateAccountViewController.swift */,
+				8D8D7F662224851C00E0D1E4 /* AvatarChooserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			children = (
 				8D740EFE21A7A2CB006295BC /* GradientView.swift */,
 				8DFA8992220D2C52004A363F /* RoundedCornersButton.swift */,
+				8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +391,8 @@
 				8D740F0421A8CEEF006295BC /* LoginViewController.swift in Sources */,
 				8D740EDF21A5FDFC006295BC /* AppDelegate.swift in Sources */,
 				8DFA8993220D2C52004A363F /* RoundedCornersButton.swift in Sources */,
+				8D8D7F672224851C00E0D1E4 /* AvatarChooserViewController.swift in Sources */,
+				8D8D7F6E22248CE200E0D1E4 /* AvatarCell.swift in Sources */,
 				8D47FD0D22220D790065E8C3 /* UserDataService.swift in Sources */,
 				8D740EFB21A61996006295BC /* ChannelViewController.swift in Sources */,
 				8D740F0921AB9BAD006295BC /* AuthService.swift in Sources */,
