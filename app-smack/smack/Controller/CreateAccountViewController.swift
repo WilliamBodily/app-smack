@@ -14,22 +14,46 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var waitIndicator: UIActivityIndicatorView!
     
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    var backgroundColor : UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
             userImageView.image = UIImage(named: UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
+            if avatarName.contains("light") && backgroundColor == nil {
+                userImageView.backgroundColor = UIColor.lightGray
+            }
         }
     }
     
+    func setupView() {
+        
+        waitIndicator.isHidden = true
+        
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER_TEXT])
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER_TEXT])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER_TEXT])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountViewController.handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     @IBAction func createAccountPressed(_ sender: Any) {
+        waitIndicator.isHidden = false
+        waitIndicator.startAnimating()
         guard let name = usernameTextField.text , usernameTextField.text != "" else { return }
         guard let email = emailTextField.text , emailTextField.text != "" else { return }
         guard let password = passwordTextField.text , passwordTextField.text != "" else { return }
@@ -42,8 +66,11 @@ class CreateAccountViewController: UIViewController {
                         print("Logged in user successfully!", AuthService.instance.authToken)
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion:  { (success) in
                             if (success) {
+                                self.waitIndicator.isHidden = true
+                                self.waitIndicator.stopAnimating()
                                 print(UserDataService.instance.name, UserDataService.instance.avatarName)
                                 self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
+                                NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_CHANGE, object: nil)
                             }
                         })
                     }
@@ -57,6 +84,16 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func generateBackgroundColorPressed(_ sender: Any) {
+        
+        let red = CGFloat(arc4random_uniform(255)) / 255
+        let green = CGFloat(arc4random_uniform(255)) / 255
+        let blue = CGFloat(arc4random_uniform(255)) / 255
+        
+        backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+        
+        UIView.animate(withDuration: 0.2) {
+            self.userImageView.backgroundColor = self.backgroundColor
+        }
     }
     
     @IBAction func closePressed(_ sender: Any) {
