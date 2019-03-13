@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E5B3B8FAD346097B2EF8533 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE38E521DEEB80CFE847EBFD /* Pods_Smack.framework */; };
 		8D47FD0D22220D790065E8C3 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D47FD0C22220D790065E8C3 /* UserDataService.swift */; };
+		8D615555222F47080056D757 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D615553222F47080056D757 /* ProfileViewController.swift */; };
+		8D615556222F47080056D757 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D615554222F47080056D757 /* ProfileViewController.xib */; };
 		8D740EDF21A5FDFC006295BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D740EDE21A5FDFC006295BC /* AppDelegate.swift */; };
 		8D740EE421A5FDFC006295BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D740EE221A5FDFC006295BC /* Main.storyboard */; };
 		8D740EE621A5FDFD006295BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D740EE521A5FDFD006295BC /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		8D47FD0C22220D790065E8C3 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		8D615553222F47080056D757 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8D615554222F47080056D757 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		8D740EDB21A5FDFC006295BC /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D740EDE21A5FDFC006295BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D740EE321A5FDFC006295BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +127,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D61555C222F472E0056D757 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				8D615554222F47080056D757 /* ProfileViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		8D740ED221A5FDFC006295BC = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 		8D740EDD21A5FDFC006295BC /* smack */ = {
 			isa = PBXGroup;
 			children = (
+				8D61555C222F472E0056D757 /* XIBs */,
 				8D740F0721AB9B8C006295BC /* Services */,
 				8D740F0021A8C6C0006295BC /* Utilities */,
 				8D740EF721A61959006295BC /* Model */,
@@ -177,6 +190,7 @@
 				8D740F0321A8CEEF006295BC /* LoginViewController.swift */,
 				8D740F0521A8E010006295BC /* CreateAccountViewController.swift */,
 				8D8D7F662224851C00E0D1E4 /* AvatarChooserViewController.swift */,
+				8D615553222F47080056D757 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -335,6 +349,7 @@
 			files = (
 				8D740EE921A5FDFD006295BC /* LaunchScreen.storyboard in Resources */,
 				8D740EE621A5FDFD006295BC /* Assets.xcassets in Resources */,
+				8D615556222F47080056D757 /* ProfileViewController.xib in Resources */,
 				8D740EE421A5FDFC006295BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +418,7 @@
 				8D740EFF21A7A2CB006295BC /* GradientView.swift in Sources */,
 				8D740F0621A8E010006295BC /* CreateAccountViewController.swift in Sources */,
 				8D740EFD21A619A9006295BC /* ChatViewController.swift in Sources */,
+				8D615555222F47080056D757 /* ProfileViewController.swift in Sources */,
 				8D740EF321A612DD006295BC /* SWRevealViewController.m in Sources */,
 				8D740F0221A8C6D8006295BC /* Constants.swift in Sources */,
 			);

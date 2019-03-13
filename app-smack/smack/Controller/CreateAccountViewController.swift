@@ -52,8 +52,10 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
+        
         waitIndicator.isHidden = false
         waitIndicator.startAnimating()
+        
         guard let name = usernameTextField.text , usernameTextField.text != "" else { return }
         guard let email = emailTextField.text , emailTextField.text != "" else { return }
         guard let password = passwordTextField.text , passwordTextField.text != "" else { return }
@@ -64,11 +66,12 @@ class CreateAccountViewController: UIViewController {
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                     if (success) {
                         print("Logged in user successfully!", AuthService.instance.authToken)
+                        print("User Name: \(name)/nAvatar Name: \(self.avatarName)/nAvatar Color: \(self.avatarColor)")
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion:  { (success) in
                             if (success) {
                                 self.waitIndicator.isHidden = true
                                 self.waitIndicator.stopAnimating()
-                                print(UserDataService.instance.name, UserDataService.instance.avatarName)
+                                print("User Name: \(UserDataService.instance.name)/nAvatar Name: \(UserDataService.instance.avatarName)/nAvatar Color: \(UserDataService.instance.avatarColor)")
                                 self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
                                 NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_CHANGE, object: nil)
                             }
@@ -90,7 +93,7 @@ class CreateAccountViewController: UIViewController {
         let blue = CGFloat(arc4random_uniform(255)) / 255
         
         backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
-        
+        avatarColor = "[\(red), \(green), \(blue), 1]"
         UIView.animate(withDuration: 0.2) {
             self.userImageView.backgroundColor = self.backgroundColor
         }
