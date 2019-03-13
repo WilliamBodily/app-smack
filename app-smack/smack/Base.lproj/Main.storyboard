@@ -282,7 +282,14 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="gB6-Y7-RdG" eventType="touchUpInside" id="rON-0N-zOY"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Azw-Yw-eWR">
+                                <rect key="frame" x="169" y="209" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -290,7 +297,9 @@
                             <constraint firstItem="5Cp-TI-66J" firstAttribute="top" secondItem="XAM-0b-fou" secondAttribute="top" constant="60" id="4n1-P5-huJ"/>
                             <constraint firstItem="Pdr-UH-IDS" firstAttribute="top" secondItem="5Cp-TI-66J" secondAttribute="bottom" constant="40" id="EkG-eT-6gs"/>
                             <constraint firstItem="cSC-L5-Zn9" firstAttribute="centerX" secondItem="HED-3V-iHh" secondAttribute="centerX" id="JHl-of-Glz"/>
+                            <constraint firstItem="Azw-Yw-eWR" firstAttribute="centerX" secondItem="HED-3V-iHh" secondAttribute="centerX" id="KDO-K0-Sa3"/>
                             <constraint firstItem="RxR-XG-w1t" firstAttribute="top" secondItem="XAM-0b-fou" secondAttribute="top" constant="8" id="Pdn-DL-gfP"/>
+                            <constraint firstItem="Azw-Yw-eWR" firstAttribute="centerY" secondItem="HED-3V-iHh" secondAttribute="centerY" constant="-106" id="ZAg-Aj-hA1"/>
                             <constraint firstItem="Pdr-UH-IDS" firstAttribute="centerX" secondItem="HED-3V-iHh" secondAttribute="centerX" id="eWy-2B-8qx"/>
                             <constraint firstItem="5Cp-TI-66J" firstAttribute="centerX" secondItem="HED-3V-iHh" secondAttribute="centerX" id="gRt-01-pJX"/>
                             <constraint firstItem="jlM-iF-onG" firstAttribute="centerX" secondItem="HED-3V-iHh" secondAttribute="centerX" id="kz6-sF-Db0"/>
@@ -302,6 +311,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="q5c-QS-jQD" id="7uI-43-eWl"/>
                         <outlet property="usernameTextField" destination="KaS-BV-ggj" id="OLc-rt-jHv"/>
+                        <outlet property="waitIndicator" destination="Azw-Yw-eWR" id="ViL-mW-8F8"/>
                         <segue destination="3I0-Ys-jgG" kind="show" identifier="toCreateAccount" id="tYa-Ia-WZc"/>
                     </connections>
                 </viewController>
