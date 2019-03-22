@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E5B3B8FAD346097B2EF8533 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE38E521DEEB80CFE847EBFD /* Pods_Smack.framework */; };
+		8D3E9EDF224565B500F2EF06 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E9EDE224565B500F2EF06 /* ChannelCell.swift */; };
 		8D47FD0D22220D790065E8C3 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D47FD0C22220D790065E8C3 /* UserDataService.swift */; };
 		8D615555222F47080056D757 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D615553222F47080056D757 /* ProfileViewController.swift */; };
 		8D615556222F47080056D757 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D615554222F47080056D757 /* ProfileViewController.xib */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D3E9EDE224565B500F2EF06 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		8D47FD0C22220D790065E8C3 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		8D615553222F47080056D757 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8D615554222F47080056D757 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				8DFA8992220D2C52004A363F /* RoundedCornersButton.swift */,
 				8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */,
 				8DCD8FF3222B09F300E5C406 /* CircleImage.swift */,
+				8D3E9EDE224565B500F2EF06 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D740F0421A8CEEF006295BC /* LoginViewController.swift in Sources */,
+				8D3E9EDF224565B500F2EF06 /* ChannelCell.swift in Sources */,
 				8D740EDF21A5FDFC006295BC /* AppDelegate.swift in Sources */,
 				8DFA8993220D2C52004A363F /* RoundedCornersButton.swift in Sources */,
 				8DCD8FF4222B09F300E5C406 /* CircleImage.swift in Sources */,
