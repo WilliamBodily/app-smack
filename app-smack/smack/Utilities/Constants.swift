@@ -23,6 +23,8 @@ let PURPLE_PLACEHOLDER_TEXT = #colorLiteral(red: 0.2588235294, green: 0.32941176
 
 // Notifications
 let NOTIFICATION_USER_DATA_CHANGE = Notification.Name("notificationUserDataChange")
+let NOTIFICATION_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIFICATION_CHANNEL_SELECTED = Notification.Name("channelSelected")
 
 // Segues
 let TO_LOGIN = "toLogin"
