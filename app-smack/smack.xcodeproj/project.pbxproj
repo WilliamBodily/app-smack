@@ -33,6 +33,7 @@
 		8D8D7F6E22248CE200E0D1E4 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */; };
 		8DA81FD5223AC0D9007AAAEF /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA81FD4223AC0D9007AAAEF /* MessageService.swift */; };
 		8DA81FDC223AC124007AAAEF /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA81FDB223AC124007AAAEF /* Channel.swift */; };
+		8DC85C2E2248009E00A4C9E1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC85C2D2248009E00A4C9E1 /* MessageCell.swift */; };
 		8DCD8FF4222B09F300E5C406 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCD8FF3222B09F300E5C406 /* CircleImage.swift */; };
 		8DFA8993220D2C52004A363F /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA8992220D2C52004A363F /* RoundedCornersButton.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		8DA81FD4223AC0D9007AAAEF /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		8DA81FDB223AC124007AAAEF /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		8DC85C2D2248009E00A4C9E1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		8DCD8FF3222B09F300E5C406 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		8DFA8992220D2C52004A363F /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		8DFA899422159CDE004A363F /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = smack.xcodeproj/../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				8D8D7F6D22248CE200E0D1E4 /* AvatarCell.swift */,
 				8DCD8FF3222B09F300E5C406 /* CircleImage.swift */,
 				8D3E9EDE224565B500F2EF06 /* ChannelCell.swift */,
+				8DC85C2D2248009E00A4C9E1 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				8D3E9EDF224565B500F2EF06 /* ChannelCell.swift in Sources */,
 				8D740EDF21A5FDFC006295BC /* AppDelegate.swift in Sources */,
 				8DFA8993220D2C52004A363F /* RoundedCornersButton.swift in Sources */,
+				8DC85C2E2248009E00A4C9E1 /* MessageCell.swift in Sources */,
 				8DCD8FF4222B09F300E5C406 /* CircleImage.swift in Sources */,
 				8D28570C2246F69D00CB9732 /* Message.swift in Sources */,
 				8DA81FDC223AC124007AAAEF /* Channel.swift in Sources */,
