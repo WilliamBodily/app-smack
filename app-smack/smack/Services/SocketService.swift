@@ -65,7 +65,7 @@ class SocketService: NSObject {
         completion(true)
     }
     
-    func getMessage(completion: @escaping CompletionHandler) {
+    func getMessage(completion: @escaping (_ newMessage: Message) -> Void) {
         socket.on("messageCreated") { (data, ack) in
             guard let messageBody = data[0] as? String else { return }
             guard let userId = data[1] as? String else { return }
@@ -76,20 +76,13 @@ class SocketService: NSObject {
             guard let messageId = data[6] as? String else { return }
             guard let timeStamp = data[7] as? String else { return }
             
-            if channelId == MessageService.instance.selecteChannel?._id && AuthService.instance.isLoggedIn {
-                
-                let jsonData: JSON = ["_id": messageId, "message": messageBody, "userId": userId, "channelId": channelId, "userName": userName, "userAvatar": userAvatar, "userAvatarColor": userAvatarColor]
-                
-                do {
-                    let newMessage = try JSONDecoder().decode(Message.self, from: jsonData.rawData())
-                    MessageService.instance.messages.append(newMessage)
-                } catch let error {
-                    debugPrint(error as Any)
-                }
-                
-                completion(true)
-            } else {
-                completion(false)
+            let jsonData: JSON = ["_id": messageId, "message": messageBody, "userId": userId, "channelId": channelId, "userName": userName, "userAvatar": userAvatar, "userAvatarColor": userAvatarColor]
+            
+            do {
+                let newMessage = try JSONDecoder().decode(Message.self, from: jsonData.rawData())
+                completion(newMessage)
+            } catch let error {
+                debugPrint(error as Any)
             }
         }
     }
