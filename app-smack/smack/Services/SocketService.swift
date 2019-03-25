@@ -64,5 +64,34 @@ class SocketService: NSObject {
         socket.emit("newMessage", body, userId, channelId, user.name, user.avatarName, user.avatarColor)
         completion(true)
     }
+    
+    func getMessage(completion: @escaping CompletionHandler) {
+        socket.on("messageCreated") { (data, ack) in
+            guard let messageBody = data[0] as? String else { return }
+            guard let userId = data[1] as? String else { return }
+            guard let channelId = data[2] as? String else { return }
+            guard let userName = data[3] as? String else { return }
+            guard let userAvatar = data[4] as? String else { return }
+            guard let userAvatarColor = data[5] as? String else { return }
+            guard let messageId = data[6] as? String else { return }
+            guard let timeStamp = data[7] as? String else { return }
+            
+            if channelId == MessageService.instance.selecteChannel?._id && AuthService.instance.isLoggedIn {
+                
+                let jsonData: JSON = ["_id": messageId, "message": messageBody, "userId": userId, "channelId": channelId, "userName": userName, "userAvatar": userAvatar, "userAvatarColor": userAvatarColor]
+                
+                do {
+                    let newMessage = try JSONDecoder().decode(Message.self, from: jsonData.rawData())
+                    MessageService.instance.messages.append(newMessage)
+                } catch let error {
+                    debugPrint(error as Any)
+                }
+                
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
 
 }

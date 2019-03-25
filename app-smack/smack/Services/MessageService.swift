@@ -46,10 +46,7 @@ class MessageService {
                 guard let data = response.data else { return }
                 
                 do {
-                    let message = try JSONDecoder().decode([Message].self, from: data)
-                    if message.count > 0 {
-                        self.messages.append(message[0])
-                    }
+                    self.messages = try JSONDecoder().decode([Message].self, from: data)
                 } catch let error {
                     debugPrint(error as Any)
                 }
