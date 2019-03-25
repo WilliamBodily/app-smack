@@ -76,7 +76,7 @@ class SocketService: NSObject {
             guard let messageId = data[6] as? String else { return }
             guard let timeStamp = data[7] as? String else { return }
             
-            let jsonData: JSON = ["_id": messageId, "message": messageBody, "userId": userId, "channelId": channelId, "userName": userName, "userAvatar": userAvatar, "userAvatarColor": userAvatarColor]
+            let jsonData: JSON = ["_id": messageId, "message": messageBody, "userId": userId, "channelId": channelId, "userName": userName, "userAvatar": userAvatar, "userAvatarColor": userAvatarColor, "__v": 0, "timeStamp": timeStamp]
             
             do {
                 let newMessage = try JSONDecoder().decode(Message.self, from: jsonData.rawData())
