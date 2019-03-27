@@ -119,6 +119,30 @@ class AuthService {
         }
     }
     
+    func updateUserById(name: String, completion: @escaping CompletionHandler) {
+        
+        let body: [String: Any] = [
+            "name": name,
+            "email": UserDataService.instance.email,
+            "avatarName": UserDataService.instance.avatarName,
+            "avatarColor": UserDataService.instance.avatarColor
+        ]
+        
+        print("URL: \(URL_USER)/\(UserDataService.instance.id)")
+        print("AUTHORIZATION_HEADER: \(AUTHORIZATION_HEADER)")
+        
+        Alamofire.request("\(URL_USER)/\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: AUTHORIZATION_HEADER).responseString { (response) in
+            print("RESPONSE: \(response.description)")
+            if response.result.error == nil {
+                self.setUserName(name: name)
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
     func findUserByEmail(completion: @escaping CompletionHandler) {
         Alamofire.request("\(URL_USER_BY_EMAIL)/\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTHORIZATION_HEADER).responseJSON
             { (response) in
@@ -146,6 +170,10 @@ class AuthService {
         } catch {
             debugPrint(data.debugDescription)
         }
+    }
+    
+    func setUserName(name: String) {
+        UserDataService.instance.setUserName(name: name)
     }
     
 }
