@@ -128,9 +128,6 @@ class AuthService {
             "avatarColor": UserDataService.instance.avatarColor
         ]
         
-        print("URL: \(URL_USER)/\(UserDataService.instance.id)")
-        print("AUTHORIZATION_HEADER: \(AUTHORIZATION_HEADER)")
-        
         Alamofire.request("\(URL_USER)/\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: AUTHORIZATION_HEADER).responseString { (response) in
             print("RESPONSE: \(response.description)")
             if response.result.error == nil {
